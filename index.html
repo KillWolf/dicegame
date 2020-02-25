@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+    <link type="text/css" rel="stylesheet" href="style.css">
+
+    <title>Pig Game</title>
+</head>
+
+<body>
+    <div class="wrapper clearfix">
+        <div class="previousRoll" id="previousRoll">PREVIOUS ROLL</div>
+        <div class="smallDiceWrapper">
+            <img src="dice-5.png" alt="smallDice" id="smallDie" class="smallDice">
+            <img src="dice-5.png" alt="smallDice" id="smallDie2" class="smallDice">
+        </div>
+        <div class="player-0-panel active">
+            <div class="player-name" id="name-0">Player 1</div>
+            <div class="player-score" id="score-0">43</div>
+            <div class="player-current-box">
+                <div class="player-current-label">Current</div>
+                <div class="player-current-score" id="current-0">11</div>
+            </div>
+        </div>
+
+        <div class="player-1-panel">
+            <div class="player-name" id="name-1">Player 2</div>
+            <div class="player-score" id="score-1">72</div>
+            <div class="player-current-box">
+                <div class="player-current-label">Current</div>
+                <div class="player-current-score" id="current-1">0</div>
+            </div>
+        </div>
+
+        <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
+        <div id="rolledOne" class="rolledOne">ONE WAS ROLLED! NEXT PLAYER</div>
+        <div id="doubleSixes" class="doubleSixes">TWO SIXES IN A ROW WAS ROLLED! NEXT PLAYER</div>
+        <div id="newScoreWrapper" class="newScoreWrapper">NEW SCORE <p class="newScore" id="newScore"></p></div>
+        <form action="submit" id="setScoreForm">
+            <label for="score-input">Score to win</label>
+            <input max="9999" type="number" id="score-input" placeholder="Score to win" />
+        </form>
+        <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
+        <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
+
+        <img src="dice-5.png" alt="Dice" id="dice" class="dice firstDie">
+        <img src="dice-5.png" alt="Dice" id="dice2" class="dice secondDie">
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
